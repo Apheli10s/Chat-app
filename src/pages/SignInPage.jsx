@@ -32,7 +32,7 @@ export function SignInPage(props){
                                     onChange={handleUsernameChange}
                                     value={formState}/>
                     <RandomNameButton onRandomName ={handleUsernameChange}/>
-                    <SubmitFormField />
+                    <SubmitFormField label="Sign in"/>
                 </form>
             </div>
         </div>
