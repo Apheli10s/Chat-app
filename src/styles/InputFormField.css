@@ -1,3 +1,22 @@
 .input-form-field {
     margin: 16px 0;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border: solid;
+    border-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    background-color: rgb(134, 108, 108);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.input-box {
+    padding-left: 50px;
+    border-color: rgb(0, 0, 0);
+    text-align: end;
+    border-radius: 5px;
+    margin-left: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+

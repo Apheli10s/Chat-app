@@ -1,4 +1,5 @@
 import "../styles/InputFormField.css"
+import { FormField } from "./FormField"
 
 export function InputFormField (props){
 
@@ -7,9 +8,9 @@ export function InputFormField (props){
     }
 
     return (
-        <div className="input-form-field"> 
-                        <label>{props.label}</label>
-                        <input type={props.type} onChange={handleChange} value={props.value}/>
-                    </div>
+        <FormField> 
+            <label>{props.label}</label>
+            <input className="input-box" type={props.type} onChange={handleChange} value={props.value}/>
+        </FormField>
     );
 };
