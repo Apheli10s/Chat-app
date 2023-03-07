@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { InputFormField } from "../components/InputFormField";
-import { RandomNameButton } from "../components/RandomNameButton";
+import { RandomNameFormField } from "../components/RandomNameFormField";
 import { SubmitFormField } from "../components/SubmitFormField";
 
 export function SignInPage(props){
@@ -31,7 +31,7 @@ export function SignInPage(props){
                                     type="text" 
                                     onChange={handleUsernameChange}
                                     value={formState}/>
-                    <RandomNameButton onRandomName ={handleUsernameChange}/>
+                    <RandomNameFormField onRandomName ={handleUsernameChange}/>
                     <SubmitFormField label="Sign in"/>
                 </form>
             </div>

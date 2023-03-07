@@ -1,0 +1,10 @@
+.button {
+    width: 100%;
+    background-color: rgb(134, 108, 108);
+    border-radius: none;
+    color: white;
+    height: 40px;
+    border-color: rgb(0, 0, 0)  
+};
+
+/*https://ianlunn.github.io/Hover/ */

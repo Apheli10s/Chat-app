@@ -1,3 +1,5 @@
+import { Button } from "./Button";
+
 const adjectives = ['blue', 'dark', 'pink', 'long', 'stupid', 'stinky'];
 const moreAdjectives =['shitty', 'filthy', 'fucking', 'pirate',]
 const nouns = ['dog', 'squirrel', 'cat', 'uncle', 'donkey', 'beard'];
@@ -16,6 +18,6 @@ export function RandomNameButton (props){
     }
 
     return(
-        <button type="button" onClick={handleClick}>Get random name</button>
+        <Button type="button" onClick={handleClick} label="Get random name" /> 
     );
 }

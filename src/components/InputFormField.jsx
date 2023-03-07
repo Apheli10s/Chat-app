@@ -1,3 +1,5 @@
+import "../styles/InputFormField.css"
+
 export function InputFormField (props){
 
     function handleChange(event){
