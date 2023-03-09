@@ -5,9 +5,11 @@ import { RandomNameButton } from "../components/RandomNameButton";
 import { SubmitFormField } from "../components/SubmitFormField";
 import { getRandomName } from "../library/random";
 import { Button } from "../components/Button";
+import { AvatarFormField } from "../components/AvatarFormField";
 
 export function SignInPage(props){
     const [ formState, setFormState ] = useState(getRandomName());  //pozvali smo funkciju useState kako bi se random name pokazalo na page loadu 
+    const [avatar, setAvatar ] = useState();
 
     function handleSubmit(event){   //prati sto je user submitao na kraju 
         event.preventDefault();   
@@ -18,13 +20,15 @@ export function SignInPage(props){
         setFormState(value);  //prati promjenu u username inputu
     }
 
-    console.log(formState);
-
+    function handleAvatarChange (value){
+        setAvatar(value);
+    }
 
     return (
         <div className ="sign-in-page">
             <div className="card">
                 <form className="sign-in-form" onSubmit={handleSubmit}>
+                    <AvatarFormField onChange={handleAvatarChange}/>
                     <InputFormField label="Username:" 
                                     type="text" 
                                     onChange={handleUsernameChange}
