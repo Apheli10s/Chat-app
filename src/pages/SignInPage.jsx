@@ -4,7 +4,6 @@ import { InputFormField } from "../components/InputFormField";
 import { RandomNameButton } from "../components/RandomNameButton";
 import { SubmitFormField } from "../components/SubmitFormField";
 import { getRandomName } from "../library/random";
-import { Button } from "../components/Button";
 import { AvatarFormField } from "../components/AvatarFormField";
 
 export function SignInPage(props){
@@ -13,7 +12,10 @@ export function SignInPage(props){
 
     function handleSubmit(event){   //prati sto je user submitao na kraju 
         event.preventDefault();   
-        props.onSubmit(formState);
+        props.onSubmit({
+            username: formState,     //prikuplja ukucani username i odabrani avatar
+            avatarIndex: avatar,
+        });
     }
 
     function handleUsernameChange(value){
@@ -33,13 +35,11 @@ export function SignInPage(props){
                                     type="text" 
                                     onChange={handleUsernameChange}
                                     value={formState}/>
-                    <SubmitFormField label="Sign in"/>
+                    <SubmitFormField label="Sign in"
+                        type="submit"/>
                     <FormField>
                         <RandomNameButton onRandomName ={handleUsernameChange}/>
                      </FormField>
-                    <FormField>
-                        <Button type="submit" label="Sign in" />
-                    </FormField>
                 </form>
             </div>
         </div>

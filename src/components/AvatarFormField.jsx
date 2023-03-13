@@ -1,11 +1,7 @@
 import { useState } from "react";
 import { FormField } from "./FormField";
+import { avatarImages } from "../library/avatar.js"
 
-const avatarImages = [
-    '/avatars/a.jpg',
-    '/avatars/b.jpg',
-    '/avatars/c.jpg',
-];
 
 export function AvatarFormField(props){         //if statemente smo ukljucili; ako dodjemo do zadnje slike da nas vrati na pocetak
     const [index, setIndex] = useState(0);        //ako idemo u nazad i predjemo prvu sliku, da odemo na kraj
