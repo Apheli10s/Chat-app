@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { SignInForm } from "../components/SignInForm";
 import { AppContext } from "../contexts/AppContext";
+import { Navigate } from "react-router-dom";
 
 export function SignInPage(){
     const context = useContext(AppContext);
@@ -8,6 +9,10 @@ export function SignInPage(){
     function handleSubmit(formData){
         context.setUsername(formData.username);
         context.setAvatarIndex(formData.avatarIndex)
+    }
+
+    if (context.isSignedIn){
+        return <Navigate to="/chat" replace />;
     }
 
     return (

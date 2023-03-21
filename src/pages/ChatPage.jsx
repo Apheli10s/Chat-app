@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Message } from "../components/Message";
 import { useContext } from "react";
 import { AppContext } from "../contexts/AppContext";
+import { Navigate } from "react-router-dom";
 
 export function ChatPage(props){
     const [messages, setMessages] = useState ([]);
@@ -20,6 +21,10 @@ export function ChatPage(props){
         text={message.text}/>
         );
     });
+
+    if (!context.isSignedIn){
+        return <Navigate to="/" replace /> //vodi korisinka na naslovnicu ako ukuca u webstranicu /chat a nije logged in 
+    }
 
     return(
         <div>
