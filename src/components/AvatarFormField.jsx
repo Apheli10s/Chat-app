@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FormField } from "./FormField";
 import { avatarImages } from "../library/avatar.js"
 
@@ -6,7 +6,9 @@ import { avatarImages } from "../library/avatar.js"
 export function AvatarFormField(props){         //if statemente smo ukljucili; ako dodjemo do zadnje slike da nas vrati na pocetak
     const [index, setIndex] = useState(0);        //ako idemo u nazad i predjemo prvu sliku, da odemo na kraj
     
-    props.onChange(index);
+    useEffect(()=>{
+        props.onChange(index);
+    }, [index, props]) 
 
     function handlePreviousAvatar(){
         if(index <= 0){    
