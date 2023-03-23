@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { SignInForm } from "../components/SignInForm";
 import { AppContext } from "../contexts/AppContext";
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { MessageOfTheDay } from "../components/MessageOfTheDay";
 
 export function SignInPage(){
@@ -21,6 +21,7 @@ export function SignInPage(){
             <MessageOfTheDay />
             <div className="card">
                 <SignInForm onSubmit={handleSubmit} />
+                <Link to="/faq">Read the FAQ!</Link>
             </div>
         </div>
     );
