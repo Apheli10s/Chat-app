@@ -1,12 +1,10 @@
 
-const adjectives = ['blue', 'dark', 'pink', 'long', 'stupid', 'stinky'];
-const moreAdjectives =['shitty', 'filthy', 'fucking', 'pirate',]
-const nouns = ['dog', 'squirrel', 'cat', 'uncle', 'donkey', 'beard'];
+const adjectives = ['Blue', 'Dark', 'Pink', 'Long', 'Stupid', 'Stinky'];
+const nouns = ['Dog', 'Squirrel', 'Cat', 'Uncle', 'Donkey', 'Beard'];
 
 export function getRandomName(){
     const adjectiveIndex = Math.floor(Math.random() * adjectives.length);
-    const moreIndex = Math.floor(Math.random() * moreAdjectives.length);
     const nounIndex = Math.floor(Math.random() * nouns.length);
 
-    return `${adjectives[adjectiveIndex]} ${moreAdjectives[moreIndex]} ${nouns[nounIndex]}`;
+    return `${adjectives[adjectiveIndex]} ${nouns[nounIndex]}:`;
 }

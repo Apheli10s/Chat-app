@@ -1,0 +1,17 @@
+
+.message{
+    margin-top: 2px;
+    border: solid;
+    border-color: rgb(58, 58, 57);
+    background-color: rgb(209, 107, 107);
+    border-radius: 10px;
+    position: relative;
+    width: 300px;
+    height: auto;
+    display: flex;
+    justify-content: start;
+}
+
+.message:first-child{
+    background-color: rgb(173, 136, 136);
+}
